@@ -32,6 +32,10 @@
            js.src = "https://connect.facebook.net/en_US/sdk.js";
            fjs.parentNode.insertBefore(js, fjs);
          }(document, 'script', 'facebook-jssdk'));
+
+         FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+        });
       </script>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">

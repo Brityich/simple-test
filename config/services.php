@@ -43,7 +43,10 @@ return [
     ],
 
     'facebook' => [
-        
-    ]
+        'client_id' => env('FACEBOOK_ID', '223289254895399'),
+        'client_secret' => env('FACEBOOK_SECRET', 'd7c77f5851026bc80c4be8d8fe12cdad'),
+        'redirect' => env('FACEBOOK_URL');
+    ],
 
+    
 ];

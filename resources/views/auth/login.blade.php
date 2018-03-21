@@ -10,7 +10,6 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
-
                         <div class="form-group row">
                             <label for="email" class="col-sm-4 col-form-label text-md-right">E-Mail Address</label>
 
@@ -61,6 +60,20 @@
                             </div>
                         </div>
                     </form>
+                    <div class="form-group row mb-0">
+                        <a class="btn btn-link" href="#">
+                            Facebook login
+                        </a>
+                        <a class="b-social-registration-ico
+                        b-social-registration-ico__google
+                        js-registration-external-service-select-provider
+                        js-registration-external-service-select-provider__google" href="#">
+                            Google+ login
+                        </a>
+                        <a class="btn btn-link" href="#">
+                            Github login
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

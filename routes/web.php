@@ -26,8 +26,8 @@ Route::group(
         Route::get('/category/{id}', 'HomeController@getCategory')->name('getcategory');
         Route::get('/changelang/{lang}', 'HomeController@changeLang')->name('changelang');
         Auth::routes();
-        Route::get('auth/{provider}', 'Auth\LoginController@redirectToProvider');
-        Route::get('auth/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
+        Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
+        Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
     });
 
 //Admin

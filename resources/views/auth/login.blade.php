@@ -60,19 +60,19 @@
                             </div>
                         </div>
                     </form>
-                    <div class="form-group row mb-0">
-                        <a class="btn btn-link" href="#">
-                            Facebook login
-                        </a>
-                        <a class="b-social-registration-ico
-                        b-social-registration-ico__google
-                        js-registration-external-service-select-provider
-                        js-registration-external-service-select-provider__google" href="#">
-                            Google+ login
-                        </a>
-                        <a class="btn btn-link" href="#">
-                            Github login
-                        </a>
+
+                    <div class="form-group">
+                        <div class="col-md-8 col-lg-8 col-md-offset-4 col-lg-offset-4">
+                            <a class="btn btn-sm" href="{{ url('login/facebook') }}">
+                                <i class="fa fa-facebook fa-3x"></i>
+                            </a>
+                            <a class="btn btn-sm" href="{{ url('login/google') }}">
+                                <i class="fa fa-google fa-3x"></i>
+                            </a>
+                            <a class="btn btn-sm" href="{{ url('login/github') }}">
+                                <i class="fa fa-github fa-3x"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>

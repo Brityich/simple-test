@@ -49,10 +49,10 @@ Route::group(['prefix'=>'/admin'], function($id) {
         Route::post('/savesettings', 'AdminController@saveSettings')->name('saveMainSettings');
         Route::post('/savefootersettings', 'AdminController@saveFooterSettings')->name('saveFooterSettings');
         Route::get('/editpost/{id}', 'AdminController@editPost')->name('admin-editpost');
-        Route::post('/deletepost', 'AdminController@deletePost')->name('admin-deletepost');
+        Route::get('/deletepost/{id}', 'AdminController@deletePost')->name('admin-deletepost');
         Route::get('/editcategory/{id}', 'AdminController@editCategory')->name('admin-editcategory');
-        Route::post('/deletecategory', 'AdminController@deleteCategory')->name('admin-deletecategory');
-        Route::post('/send-edit-post', 'AdminController@sendEditedPost')->name('send-edit-post');
-        Route::post('/send-edit-category', 'AdminController@sendEditedCategory')->name('send-edit-post');
+        Route::get('/deletecategory/{id}', 'AdminController@deleteCategory')->name('admin-deletecategory');
+        Route::post('/send-edit-post', 'AdminController@sendEditPost')->name('send-edit-post');
+        Route::post('/send-edit-category', 'AdminController@sendEditCategory')->name('send-edit-category');
     });
 });

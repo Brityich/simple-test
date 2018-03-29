@@ -2,15 +2,15 @@
 
 @section('admin-tools')
     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-        <form method="POST" action="{{ route('saveFooterSettings') }}">
+        <form method="POST" action="{{ route('send-edit-post') }}">
             @csrf
             <h4>Edit post: </h4>
             <div class="form-group">
-                <label for="title">Post title:</label>
-                <input type="email" class="form-control" id="title" name="title" value="{{ $post->title }}">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title" value="{{ $post->title }}">
             </div>
             <div class="form-group">
-                <label for="description">Post description:</label>
+                <label for="description">Article:</label>
                 <input type="text" class="form-control" name="description" id="description" value="{{ $post->description }}">
             </div>
             <div class="form-group">

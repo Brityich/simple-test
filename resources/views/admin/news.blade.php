@@ -80,14 +80,8 @@
                                 <td>{{ $datum->created_at }}</td>
                                 <td>{{ $datum->updated_at }}</td>
                                 <td>
-                                    <a href="{{ route('admin-editpost', [$datum->id]) }}" class="fa fa-fw fa-edit"></a>
-                                    <a onclick="event.preventDefault();
-                                                     document.getElementById('delpost-form').submit();"
-                                       class="fa fa-fw fa-times"></a>
-                                    <form id="delpost-form" action="{{ route('admin-deletepost') }}" method="POST" style="display: none;">
-                                        @csrf
-                                        <input type="hidden" name="id" id="id" value="{{ $datum->id }}">
-                                    </form>
+                                    <a href="{{ route('admin-editpost', ['id' => $datum->id]) }}" class="fa fa-fw fa-edit"></a>
+                                    <a href="{{ route('admin-deletepost', ['id' => $datum->id]) }}" class="fa fa-fw fa-times"></a>
                                 </td>
                             </tr>
                         @endforeach

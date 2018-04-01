@@ -14,7 +14,7 @@
         "bootstrap": "^4.0.0",
         "browser-sync": "2.23.6",
         "chart.js": "2.7.1",
-        "cross-env": "^5.1",
+        "cross-env": "^5.1.4",
         "datatables.net-bs4": "1.10.16",
         "font-awesome": "4.7.0",
         "gulp": "^3.9.1",
@@ -23,14 +23,14 @@
         "gulp-html-beautify": "^1.0.1",
         "gulp-pug": "^3.3.0",
         "gulp-rename": "^1.2.2",
-        "gulp-sass": "^3.1.0",
+        "gulp-sass": "^3.2.0",
         "gulp-uglify": "3.0.0",
         "jquery": "3.3.1",
         "jquery.easing": "^1.4.1",
-        "laravel-mix": "^2.0",
+        "laravel-mix": "^2.1.11",
         "lodash": "^4.17.4",
-        "popper.js": "^1.13.0",
-        "vue": "^2.5.7"
+        "popper.js": "^1.14.1",
+        "vue": "^2.5.16"
     },
     "dependencies": {}
 }

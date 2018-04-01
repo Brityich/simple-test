@@ -9,7 +9,11 @@
           <h1 class="my-4">{{ config('app.name', 'Simple site') }}
             <small></small>
           </h1>
-          <!-- Blog Post -->
+          <hr>
+          <!-- Blog Posts -->
+          @if($posts->isEmpty())
+            <i><h3>(No posts)</h3></i>
+          @else
         @foreach($posts as $post)
             <div class="card mb-4">
               <div class="card-body">
@@ -23,6 +27,7 @@
               </div>
             </div>
         @endforeach
+        @endif
           <!-- Pagination -->
           <!--<ul class="pagination justify-content-center mb-4">
             <li class="page-item">

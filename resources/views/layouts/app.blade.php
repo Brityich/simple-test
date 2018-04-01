@@ -12,27 +12,18 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .footer {
+            position: fixed;
+            left: 0; bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            appId      : '{223289254895399}',
-            cookie     : true,
-            xfbml      : true,
-            version    : '{latest-api-version}'
-          });
-          FB.AppEvents.logPageView();   
-        };
-      
-        (function(d, s, id){
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) {return;}
-           js = d.createElement(s); js.id = id;
-           js.src = "https://connect.facebook.net/en_US/sdk.js";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
+    
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-laravel">
             <div class="container">
@@ -100,7 +91,7 @@
                 </div>
             </div>
         </nav>
-
+        
         <main class="py-4">
             @yield('content')
         </main>
@@ -109,11 +100,19 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
         <div class="container">
-            <h5 class="text-center text-white">Contact information:</h5>
-            <p class="m-0 text-center text-white">{{ MyOptions::getOption('contact_email') }}</p>
-            <p class="m-0 text-center text-white">{{ MyOptions::getOption('contact_name') }}</p>
-            <p class="m-0 text-center text-white">{{ MyOptions::getOption('contact_phone') }}</p>
-            <p class="m-0 text-center text-white">{{ MyOptions::getOption('contact_address') }}</p>
+            @if(MyOptions::getOption('contact_email')==''
+                && MyOptions::getOption('contact_name')==''
+                && MyOptions::getOption('contact_phone')==''
+                && MyOptions::getOption('contact_address')=='')
+                <p class="m-0 text-left text-white">Footer</p>
+            @else
+                <h5 class="text-left text-white">Contact :</h5>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_email') }}</p>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_name') }}</p>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_phone') }}</p>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_address') }}</p>
+            @endif
+
         </div>
         <!-- /.container -->
     </footer>

@@ -55,13 +55,7 @@
                             <td>{{ $datum->posts()->count() }}</td>
                             <td>
                                 <a href="{{ route('admin-editcategory', ['id' => $datum->id]) }}" class="fa fa-fw fa-edit"></a>
-                                <a onclick="event.preventDefault();
-                                                     document.getElementById('delcategory-form').submit();"
-                                   class="fa fa-fw fa-times"></a>
-                                <form id="delcategory-form" action="{{ route('admin-deletecategory') }}" method="POST" style="display: none;">
-                                    @csrf
-                                    <input type="hidden" name="id" id="id" value="{{ $datum->id }}">
-                                </form>
+                                <a href="{{ route('admin-deletecategory', ['id' => $datum->id]) }}" class="fa fa-fw fa-times"></a>
                             </td>
                         </tr>
                     @endforeach

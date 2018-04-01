@@ -213,25 +213,33 @@ class AdminController extends Controller
         return view('admin.edit_post', ['post' => $post, 'category' => $category]);
     }
 
-    public function deletePost(Request $request)
-    {
-        /*$deletedRow = Post::destroy($request->input('id'));
-        return redirect()->back()->with('message', 'Post '.$deletedRow.' deleted');*/
-    }
-
     public function editCategory($category_id)
     {
         $category = Category::find($category_id);
         return view('admin.edit_category', ['category' => $category]);
     }
 
-    public function deleteCategory(Request $request)
+    public function deletePost(Request $request)
     {
-        /*$deletedRow = Category::destroy($request->input('id'));
-        return redirect()->back()->with('message', 'Category '.$deletedRow.' deleted');*/
+        //dd($request->id);
+        
     }
 
-    public function sendEditedPost()
+    public function deleteCategory(Request $request)
+    {
+        //$id = $request->id;
+        $categ = Category::find($request->id)->posts()->delete();
+        $categ->delete();
+        
+        //dd($categ->posts);
+    }
+
+    public function sendEditPost(Request $request)
+    {
+        
+    }
+
+    public function sendEditCategory()
     {
 
     }

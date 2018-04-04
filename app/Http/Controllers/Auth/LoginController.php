@@ -56,13 +56,10 @@ class LoginController extends Controller
     public function handleProviderCallback($provider)
     {
         $social_user = Socialite::driver($provider)->user();
-        dd($social_user);
-        /*$user = User::create([
-            ''
-        ]);*/
-
+        //dd($social_user);
+        $user = $this->findOrGetUser($social_user, $provider);
         Auth::login($user, true);
-        return $user->name;
+        return redirect($this->redirectTo);
     }
 
     /**
@@ -70,9 +67,9 @@ class LoginController extends Controller
      * @param $provider
      * @return mixed
      */
-    public function findOrGetUser($user, $provider)
+    private function findOrGetUser($user, $provider)
     {
-        $authUser = User::where('provider_id', $user->id)->first();
+        $authUser = User::where('email', $user->email)->first();
         if ($authUser) {
             return $authUser;
         }
@@ -80,7 +77,7 @@ class LoginController extends Controller
             'name'     => $user->name,
             'email'    => $user->email,
             'provider' => $provider,
-            'provider_id' => $user->id
+            'password' => bcrypt(str_random(15))
         ]);
     }
 }

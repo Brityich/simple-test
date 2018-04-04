@@ -11,9 +11,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        for($i = 0; $i < 200; $i++)
-        {
-            $this->call(NewsTableSeeder::class);
-        }
+        $this->call(OptionsTableSeeder::class);
+        $this->call(AdminsTableSeeder::class);
+        $this->call(CategoriesTableSeeder::class);
+        $this->call(NewsTableSeeder::class);
     }
 }

@@ -16,7 +16,7 @@ class NewsTableSeeder extends Seeder
             $u->posts()->save(factory(App\Model\Post::class)->make());
         });*/
         Post::create(['id_author' => 1,
-            'id_category' => 1,
+            'id_category' => rand(0,4),
             'title' => 'Lorem ipsum dolor',
             'description' => str_random(500)
         ]);

@@ -24,6 +24,7 @@
               <div class="card-footer text-muted">
                 @lang('user.posted_on') {{ $post->created_at }}
                 , {{ trans_choice('user.comments', $post->comments()->count()) }}
+                <p>{{ $categories->find($post->category_id) }}</p>
               </div>
             </div>
         @endforeach

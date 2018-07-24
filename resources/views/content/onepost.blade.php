@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+<<<<<<< HEAD
 
       <div class="row">
 
@@ -76,5 +77,26 @@
           @include('content.parts.sidebar')
         <!-- /.row -->
       </div>
+=======
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <h1 class="my-4">{{ $post->title }}
+                    <small></small>
+                </h1>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <p class="card-text">{{ $post->description }}</p>
+                    </div>
+                    <div class="card-footer text-muted">
+                        @lang('user.posted_on') {{ $post->created_at }}
+                        , {{ trans_choice('user.comments', $comments->where('id_post', $post->id)->count()) }}
+                    </div>
+                </div>
+            <!-- Sidebar -->
+        </div>
+        @include('content.parts.sidebar')
+        <!-- /.row -->
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     </div>
 @endsection

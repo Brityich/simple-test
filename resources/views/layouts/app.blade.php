@@ -43,7 +43,11 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
 
+<<<<<<< HEAD
                         <li class="nav-item">
+=======
+                        <li class="nav-item active">
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
                             <a class="nav-link" href="{{ route('home') }}">@lang('user.home')
                                 <span class="sr-only">(current)</span>
                             </a>
@@ -104,6 +108,7 @@
                 && MyOptions::getOption('contact_name')==''
                 && MyOptions::getOption('contact_phone')==''
                 && MyOptions::getOption('contact_address')=='')
+<<<<<<< HEAD
                 <p class="m-0 text-left text-white">  </p>
             @else
                 <h5 class="text-left text-white">@lang('user.contact'):</h5>
@@ -111,6 +116,15 @@
                 <p class="m-0 text-left text-white">name: {{ MyOptions::getOption('contact_name') }}</p>
                 <p class="m-0 text-left text-white">phone: {{ MyOptions::getOption('contact_phone') }}</p>
                 <p class="m-0 text-left text-white">address: {{ MyOptions::getOption('contact_address') }}</p>
+=======
+                <p class="m-0 text-left text-white">Footer</p>
+            @else
+                <h5 class="text-left text-white">Contact :</h5>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_email') }}</p>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_name') }}</p>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_phone') }}</p>
+                <p class="m-0 text-left text-white">{{ MyOptions::getOption('contact_address') }}</p>
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
             @endif
 
         </div>

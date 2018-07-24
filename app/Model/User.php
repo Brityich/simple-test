@@ -26,6 +26,7 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+<<<<<<< HEAD
 
     public function comments()
     {
@@ -36,4 +37,6 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Model\Subscription', 'id_user');
     }
+=======
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
 }

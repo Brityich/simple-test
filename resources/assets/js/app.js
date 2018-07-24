@@ -6,6 +6,10 @@
  */
 
 require('./bootstrap');
+<<<<<<< HEAD
+=======
+require('./my_app');
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
 
 window.Vue = require('vue');
 

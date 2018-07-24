@@ -28,9 +28,12 @@ class Admins extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+<<<<<<< HEAD
 
     public function posts()
     {
         return $this->hasMany('App\Model\Post', 'id_author');
     }
+=======
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
 }

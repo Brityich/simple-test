@@ -61,7 +61,11 @@
                         </div>
                     </form>
 
+<<<<<<< HEAD
                     <div class="form-group row mb-0">
+=======
+                    <div class="form-group">
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
                         <div class="col-md-8 col-lg-8 col-md-offset-4 col-lg-offset-4">
                             <a class="btn btn-sm" href="{{ url('login/facebook') }}">
                                 <i class="fa fa-facebook fa-3x"></i>

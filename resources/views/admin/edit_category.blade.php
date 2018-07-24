@@ -7,7 +7,10 @@
             <h4>Edit category: </h4>
             <div class="form-group">
                 <label for="title">Category name:</label>
+<<<<<<< HEAD
                 <input type="hidden" name="id" value="{{ $category->id }}">
+=======
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
                 <input type="text" class="form-control" id="title" name="title" value="{{ $category->name }}">
             </div>
             <button type="submit" class="btn btn-primary">Save</button>

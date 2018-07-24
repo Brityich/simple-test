@@ -9,7 +9,10 @@ use Illuminate\Http\Request;
 use App\Model\Post;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Cache;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
+=======
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
 use LaravelLocalization;
 
 class HomeController extends Controller
@@ -19,6 +22,7 @@ class HomeController extends Controller
      *
      * @return void
      */
+<<<<<<< HEAD
 
     private $myoptions_data;
     
@@ -30,6 +34,11 @@ class HomeController extends Controller
         {
             LaravelLocalization::setLocale($lang);
         }
+=======
+    public function __construct()
+    {
+        //$this->middleware('auth');
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     }
 
     /**
@@ -41,6 +50,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $num = MyOptions::getOption('number_posts');
         if($num)
         {
@@ -50,6 +60,9 @@ class HomeController extends Controller
         {
             $posts = Post::paginate(5);
         }
+=======
+        $posts = Post::paginate(5);
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
         $categories = Category::all();
         return view('content.home', ['posts' => $posts, 'categories' => $categories]);
     }
@@ -90,6 +103,7 @@ class HomeController extends Controller
         $categories = Category::all();
         return view('content.category', ['category' => $category, 'posts' => $posts, 'categories' => $categories]);
     }
+<<<<<<< HEAD
 
     public function saveComment(Request $request)
     {
@@ -106,4 +120,6 @@ class HomeController extends Controller
     {
         
     }
+=======
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
 }

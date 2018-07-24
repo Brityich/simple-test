@@ -221,18 +221,32 @@ class AdminController extends Controller
 
     public function deletePost(Request $request)
     {
+<<<<<<< HEAD
         $post = Post::find($request->id)->delete();
         return redirect()->back();
+=======
+        //dd($request->id);
+        
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     }
 
     public function deleteCategory(Request $request)
     {
+<<<<<<< HEAD
         $category = Category::find($request->id)->delete();
         return redirect()->back();
+=======
+        //$id = $request->id;
+        $categ = Category::find($request->id)->posts()->delete();
+        $categ->delete();
+        
+        //dd($categ->posts);
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     }
 
     public function sendEditPost(Request $request)
     {
+<<<<<<< HEAD
         $data = $request->only([
             'id',
             'title',
@@ -257,5 +271,13 @@ class AdminController extends Controller
             'name' => $data['title']
         ]);
         return redirect()->back();
+=======
+        
+    }
+
+    public function sendEditCategory()
+    {
+
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     }
 }

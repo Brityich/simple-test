@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOptionsTable extends Migration
+class CreateLangsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateOptionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('options', function (Blueprint $table) {
+        Schema::create('langs', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('option_key');
-            $table->text('option_value');
-<<<<<<< HEAD
+            $table->string('country');
+            $table->string('type');
+            $table->string('value');
             $table->timestamps();
-=======
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
         });
     }
 
@@ -31,6 +29,6 @@ class CreateOptionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('options');
+        Schema::dropIfExists('langs');
     }
 }

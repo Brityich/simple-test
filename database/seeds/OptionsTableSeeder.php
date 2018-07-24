@@ -12,6 +12,7 @@ class OptionsTableSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         Options::create([
             'option_key' => 'standart_language',
             'option_value' => 'en'
@@ -52,5 +53,8 @@ class OptionsTableSeeder extends Seeder
             'option_key' => 'contact_address',
             'option_value' => 'Khmelnitsky, Ukraine'
         ]);
+=======
+        
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     }
 }

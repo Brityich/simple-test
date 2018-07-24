@@ -12,7 +12,11 @@
           <hr>
           <!-- Blog Posts -->
           @if($posts->isEmpty())
+<<<<<<< HEAD
             <i><h3>@lang('user.no_posts')</h3></i>
+=======
+            <i><h3>(No posts)</h3></i>
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
           @else
         @foreach($posts as $post)
             <div class="card mb-4">
@@ -23,7 +27,11 @@
               </div>
               <div class="card-footer text-muted">
                 @lang('user.posted_on') {{ $post->created_at }}
+<<<<<<< HEAD
                 , {{ trans_choice('user.comments', $post->comments()->count(), ['value' => $post->comments()->count()]) }}
+=======
+                , {{ trans_choice('user.comments', $post->comments()->count()) }}
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
                 <p>{{ $categories->find($post->category_id) }}</p>
               </div>
             </div>

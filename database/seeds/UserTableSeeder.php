@@ -11,6 +11,10 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {
+<<<<<<< HEAD
         // 
+=======
+        //
+>>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     }
 }

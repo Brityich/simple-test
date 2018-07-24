@@ -1,0 +1,13 @@
+site domain: simple.local
+
+Options table:
+1) standart_language = en, ru
+2) about_title = "Standart title of blog"
+3) about_text = "This is a site that gives the hope"
+4) about_image = png, jpg
+5) number_posts = 5
+6) number_words = 100
+7) contact_name = your name
+8) contact_email = britov333@gmail.com
+9) contact_phone = 0932378464
+10) contact_address = address

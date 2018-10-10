@@ -43,11 +43,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-<<<<<<< HEAD
-                        <li class="nav-item">
-=======
                         <li class="nav-item active">
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
                             <a class="nav-link" href="{{ route('home') }}">@lang('user.home')
                                 <span class="sr-only">(current)</span>
                             </a>

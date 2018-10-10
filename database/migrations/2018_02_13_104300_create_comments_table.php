@@ -20,13 +20,8 @@ class CreateCommentsTable extends Migration
             $table->longText('text');
             $table->timestamps();
 
-<<<<<<< HEAD
-            $table->foreign('id_author')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('id_post')->references('id')->on('posts')->onDelete('cascade');
-=======
             $table->foreign('id_author')->references('id')->on('users');
             $table->foreign('id_post')->references('id')->on('news');
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
         });
     }
 

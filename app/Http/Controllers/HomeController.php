@@ -9,10 +9,6 @@ use Illuminate\Http\Request;
 use App\Model\Post;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Cache;
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Auth;
-=======
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
 use LaravelLocalization;
 
 class HomeController extends Controller
@@ -22,23 +18,9 @@ class HomeController extends Controller
      *
      * @return void
      */
-<<<<<<< HEAD
-
-    private $myoptions_data;
-    
     public function __construct()
     {
         //$this->middleware('auth');
-
-        if($lang = MyOptions::getOption('standart_language'))
-        {
-            LaravelLocalization::setLocale($lang);
-        }
-=======
-    public function __construct()
-    {
-        //$this->middleware('auth');
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     }
 
     /**
@@ -50,19 +32,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $num = MyOptions::getOption('number_posts');
-        if($num)
-        {
-            $posts = Post::paginate($num);
-        }
-        else 
-        {
-            $posts = Post::paginate(5);
-        }
-=======
         $posts = Post::paginate(5);
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
         $categories = Category::all();
         return view('content.home', ['posts' => $posts, 'categories' => $categories]);
     }
@@ -103,23 +73,4 @@ class HomeController extends Controller
         $categories = Category::all();
         return view('content.category', ['category' => $category, 'posts' => $posts, 'categories' => $categories]);
     }
-<<<<<<< HEAD
-
-    public function saveComment(Request $request)
-    {
-        $data = $request->only([
-            'comment-text',
-            'id'
-        ]);
-        //dd($data);
-        Comment::create(['id_author' => Auth::id(), 'id_post' => $data['id'], 'text' => $data['comment-text']]);
-        return redirect()->back();
-    }
-
-    public function subscript()
-    {
-        
-    }
-=======
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
 }

@@ -19,26 +19,15 @@ Route::group(
     ],
     function()
     {
-<<<<<<< HEAD
-        Auth::routes();
-=======
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
         Route::get('/', 'HomeController@index')->name('home');
         Route::get('/about', 'HomeController@about')->name('about');
         Route::get('/feedback', 'HomeController@feedback')->name('feedback');
         Route::get('/post/{id}', 'HomeController@getPost')->name('getpost');
         Route::get('/category/{id}', 'HomeController@getCategory')->name('getcategory');
         Route::get('/changelang/{lang}', 'HomeController@changeLang')->name('changelang');
-<<<<<<< HEAD
-        Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
-        Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
-        Route::post('send-comment', 'HomeController@saveComment')->name('send-comment');
-        Route::get('/subscript/{id}', 'HomeController@subscript')->name('subscript');
-=======
         Auth::routes();
         Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider');
         Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback');
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     });
 
 //Admin
@@ -65,9 +54,5 @@ Route::group(['prefix'=>'/admin'], function($id) {
         Route::get('/deletecategory/{id}', 'AdminController@deleteCategory')->name('admin-deletecategory');
         Route::post('/send-edit-post', 'AdminController@sendEditPost')->name('send-edit-post');
         Route::post('/send-edit-category', 'AdminController@sendEditCategory')->name('send-edit-category');
-<<<<<<< HEAD
-        
-=======
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
     });
 });

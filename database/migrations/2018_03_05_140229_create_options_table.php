@@ -17,10 +17,6 @@ class CreateOptionsTable extends Migration
             $table->increments('id');
             $table->string('option_key');
             $table->text('option_value');
-<<<<<<< HEAD
-            $table->timestamps();
-=======
->>>>>>> 858eacacc407897566ea1558eb07b077dcf5fc0e
         });
     }
 
